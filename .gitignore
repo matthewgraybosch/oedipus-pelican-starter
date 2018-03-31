@@ -1,0 +1,9 @@
+*.swp
+*~
+output/*
+pelican-plugins/*
+__pycache__
+.vscode/*
+*.pid
+.sass-cache/*
+*.core
