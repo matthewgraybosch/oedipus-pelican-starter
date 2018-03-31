@@ -27,8 +27,5 @@
   Language: English
   Doctype: HTML5
   Standards: HTML5, CSS3, WCAG 2.0 Level AAA, WAI-ARIA
-  Software: Jekyll, Atom, Github, Travis CI, rsync, ssh
+  Software: Pelican, vim, Oedipus starter kit, rsync, ssh
   OS: OpenBSD
-  Host: Dreamhost
-
-  Presented live in SATANOPHONIC 666.1 uncompressed surround sound!
