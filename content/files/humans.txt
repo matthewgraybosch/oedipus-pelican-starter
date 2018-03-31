@@ -1,0 +1,34 @@
+/* SO, YOU FOUND MY HUMANS.TXT FILE */
+  I doubt most people bother to look for this file in people's websites,
+  so you're one of a rare breed of Web surfer. Assuming you're classified
+  as human yourself, and aren't a robot or a meat popsicle.
+
+  If you ARE human, thanks for visiting. I hope you stick around a while
+  and come back often to find new goodies. Something like a CATS.TXT file,
+  perhaps? Heh-heh-heh.
+
+/* TEAM */
+  Author: Matthew GRAYBOSCH
+  Site: https://www.matthewgraybosch.com
+  Mastodon: https://octodon.social/@starbreaker
+  From: Harrisburg, PA
+
+/* THANKS */
+  Wife: Catherine GATT
+  From: Melbourne, Australia
+
+/* KITTIES */
+  Best Cat: VIRGIL
+  Pretty Princess: SMUDGE
+  Bitty Buddy: PURRSEUS
+
+/* SITE */
+  Last Update: 2018-03-27
+  Language: English
+  Doctype: HTML5
+  Standards: HTML5, CSS3, WCAG 2.0 Level AAA, WAI-ARIA
+  Software: Jekyll, Atom, Github, Travis CI, rsync, ssh
+  OS: OpenBSD
+  Host: Dreamhost
+
+  Presented live in SATANOPHONIC 666.1 uncompressed surround sound!

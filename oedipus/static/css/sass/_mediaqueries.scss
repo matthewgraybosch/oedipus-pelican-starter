@@ -1,0 +1,58 @@
+@media (min-width: $smallScreen) {
+    html {
+        font-size: large;
+    }
+    
+    blockquote {
+        margin: 1.5em 1.5em;
+    }
+    
+    figure {
+        margin: 1.5em 1.5em;
+        text-align: center;
+    }
+    
+    .page-header, .page-footer {
+        text-align: center;
+    }
+    
+    .title {
+		font-size: 2.2rem;
+		margin-bottom: .5em;
+	}
+    
+    .article-footer-info {
+        color: $blue;
+        border-bottom: dotted 0.1em $blue;
+    }
+}
+
+@media (min-width: $largeScreen) {
+    html {
+        font-size: larger;
+    }
+    
+    .title {
+		font-size: 2.2rem;
+		margin-bottom: .5em;
+	}
+    
+    blockquote, figure {
+        margin: 1.5em 3em;
+    }
+}
+
+@media (min-width: $hugeScreen) {
+    html {
+        font-size: largest;
+    }
+
+    .title {
+		font-size: 2.2rem;
+		margin-bottom: .5em;
+	}
+	
+    blockquote, figure {
+        margin: 1.5em 3em;
+    }
+}

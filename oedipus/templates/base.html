@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	<title>
+		{% block title %}{{ SITENAME }}{% endblock title %}
+  </title>
+  <meta charset="utf-8" />
+  <meta name="generator" content="{{ SITE_GENERATOR }}" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  {% if articles_paginator %}{% include 'partials/blog-index-seo.html' %}{% endif %}
+  {% if article %}{% include 'partials/article-seo.html' %}{% endif %}
+  {% if page %}{% include 'partials/page-seo.html' %}{% endif %}
+  
+  {% include 'partials/inline-style.html' %}
+  {% include 'partials/dns-prefetch.html' %}
+  {% include 'partials/feeds.html' %}
+  
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/oedipus.min.css">
+</head>
+
+<body>
+    {% include 'partials/header.html' %}
+    
+    <main class="content-container">
+		{% block content %}
+		{% endblock %}
+    </main>
+    
+	{% include 'partials/footer.html' %}
+</body>
+</html>

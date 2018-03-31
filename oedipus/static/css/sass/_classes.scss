@@ -1,0 +1,89 @@
+.content h1, h2, h3, h4, h5, h6 {
+    color: $blue;
+    font-weight: bold;
+    hyphens: auto;
+    line-height: 1.2;
+    margin-bottom: 1em;
+    margin-top: 1.5em;
+}
+
+.content a {
+	text-decoration: underline;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.header-nav, .footer-nav {
+    font-weight: bold;
+}
+
+.masthead {
+    margin-bottom: 1.5em;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.tagline {
+	font-style: italic;
+}
+
+.page-header {
+    border-bottom: solid .1em $red;
+    padding-bottom: 1em;
+}
+
+.page-footer {
+    border-top: solid .1em $red;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.red {
+    color: $red;
+    font-size: 1.25rem;
+}
+
+.image-reference {
+    display: block;
+    margin: 1em auto;
+}
+
+.offscreen {
+	a {
+		position:absolute;
+		left:-1000px;
+		top:-1000px;
+		width:1px;
+		height:1px;
+		text-align: left;
+		overflow:hidden;
+	}
+	
+	a:focus, a:active, a:hover {
+		position:absolute;
+		left:0;
+		top:0;
+		width:auto;
+		height:auto;
+		overflow:visible;
+		background-color:#FF3;
+		border: 1px dotted $offBlack;
+	}
+}
+
+table {
+	max-width: 100%;
+	border: solid .1em $offBlack;
+	
+	th {
+		padding: .25em;
+	}
+	
+	td {
+		padding: .25em;
+	}
+}

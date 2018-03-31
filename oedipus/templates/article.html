@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}
+{{ article.title|striptags }} &middot; {{ SITENAME }}
+{% endblock %}
+
+{% block content %}
+<article class="content" id="content">
+  <header id="article-header" class="article-header" aria-label="Article title">
+    <h1 class="entry-title">{{ article.title }}</h1>
+ {% import 'translations.html' as translations with context %}
+ {{ translations.translations_for(article) }}
+  </header>
+  <div class="entry-content">
+    {{ article.content }}
+  </div><!-- /.entry-content -->
+  <footer id="article-footer" class="article-footer" aria-label="Article Information">
+	<dl>
+		<dt class="article-footer-info">About This Post</dt>
+		{% if SHOW_POST_AUTHORS and article.authors %}
+		<dd>by {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% if (loop.index >= 1) and (loop.index < (loop.length - 1)) %}, {% elif loop.index == (loop.length - 1) %} and {% endif %}
+        {% endfor %}</dd>
+		{% endif %}
+		<dd>published on: <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>{% if article.modified %}, and last updated on: <time class="modified" datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time></dd>
+		{% endif %}
+		{% if SHOW_POST_CATEGORY %}
+			<dd>filed under: <em><a class="url" href="{{ SITEURL }}/blog/category/{{ category.slug }}/">{{ category }}</a></em></dd>
+		{% endif %}
+		{% if SHOW_POST_TAGS %}
+			<dd>tagged with: {% for tag in article.tags %} 
+			<a href="{{ SITEURL }}/blog/tag/{{ tag.slug }}/">"{{ tag }}"</a>{% if (loop.index >= 1) and (loop.index < (loop.length - 1)) %}, {% elif loop.index == (loop.length - 1) %} and {% endif %}
+			{% endfor %}</dd>
+		{% endif %}
+		<dt class="article-footer-info">Questions or Comments?</dt>
+		<dd>Send <a href="mailto:{{ AUTHOR_EMAIL }}?subject={{ article.title|striptags|urlencode }}">email</a> or find me on <a href="{{ AUTHOR_MASTODON }}">Mastodon</a>.</dd>
+    </dl>
+  </footer><!-- /.post-info -->
+</article>
+{% endblock %}
+

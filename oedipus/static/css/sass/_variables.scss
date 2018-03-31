@@ -1,0 +1,19 @@
+// color variables
+$white: #ffffff;
+$offWhite: #fafdf6;
+$offBlack: #494947;
+$blue: #2274a5;
+$red: #a5243d;
+$purple: #ba2c73;
+
+// font variables
+$systemSansSerif: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Fira Sans", Roboto, Oxygen, Oxygen-Sans, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", "Source Sans Pro", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$systemSerif: "Noto Serif", "Apple Garamond", "Baskerville", "Georgia", "Times New Roman", "Roboto Slab", "Droid Serif", "Times", "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$systemMonospace: "SF Mono", "Monaco", "Inconsolata", "Hack", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+
+// screen size breakpoints
+$smallScreen: 512px;
+$largeScreen: 1280px;
+$hugeScreen: 1920px;

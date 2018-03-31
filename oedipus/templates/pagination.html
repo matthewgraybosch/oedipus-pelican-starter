@@ -1,0 +1,11 @@
+{% if DEFAULT_PAGINATION %}
+<p class="paginator">
+    {% if dates_page.has_previous() %}
+        <a href="{{ SITEURL }}/{{ dates_previous_page.url }}">&laquo;</a>
+    {% endif %}
+    Page {{ dates_page.number }} / {{ dates_paginator.num_pages }}
+    {% if dates_page.has_next() %}
+        <a href="{{ SITEURL }}/{{ dates_next_page.url }}">&raquo;</a>
+    {% endif %}
+</p>
+{% endif %}

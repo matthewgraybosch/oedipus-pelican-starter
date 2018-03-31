@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Archives for {{ SITENAME }}</h1>
+
+<dl>
+{% for year, year_articles in articles|groupby('date.year')|sort(reverse=True) %}
+    <dt>{{ year }}</dt>
+    {% for article in year_articles|sort(attribute='date', reverse=True) %}
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    {% endfor %}
+{% endfor %}
+</dl>
+{% endblock %}

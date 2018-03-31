@@ -1,0 +1,13 @@
+{% if page.summary %}
+<meta name="description" content="{{ page.summary|striptags }}" />
+{% endif %}
+<!-- OpenGraph meta tags -->
+<meta property="og:title" content="{{ page.title|striptags }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+<meta property="og:type" content="{% if page.og_type %}{{ page.og_type }}{% else %}article{% endif %}" />
+<meta property="og:description" content="{{ page.summary|striptags }}" />
+<meta property="og:image" content="{{ SITEURL }}{% if page.og_image %}{{ page.og_image }}{% else %}{{ SITE_OG_IMAGE }}{% endif %}" />
+<meta property="og:locale" content="{{ LOCALE }}" />
+<meta property="og:site_name" content="{{ SITENAME }}" />
+{% if FB_APP_ID %}<meta property="fb:app_id" content="{{ FB_APP_ID }}" />{% endif %}
+<!-- Structured Data: because meta tags aren't good enough for Google. -->

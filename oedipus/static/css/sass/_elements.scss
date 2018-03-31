@@ -1,0 +1,115 @@
+html {
+    font-size: medium;
+}
+
+body {
+    background-color: $offWhite;
+    color: $offBlack;
+    font-family: $systemSansSerif;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 2rem auto;
+    max-width: 40em;
+    padding: 0 2em;
+    width: auto;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
+    transition-property: color, background-color;
+    transition-timing-function: linear;
+    
+    &:visited {
+        color: $purple;
+        font-style: italic;
+    }
+    
+    &:hover {
+        background: $blue;
+        color: $offWhite;
+        text-decoration: underline;
+    }
+    
+    &:active {
+        background-color: $blue;
+        color: $offWhite;
+        color: $white;
+    }
+}
+
+p {
+    hyphens: auto;
+}
+
+ul {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+h2 {
+	border-bottom: solid 0.3em $blue;
+    font-size: 1.8rem;
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    border-bottom: solid 0.2em $blue;
+    font-size: 1.5rem;
+    padding-bottom: 0.1em;
+}
+
+h4 {
+    border-bottom: solid 0.1em $blue;
+    font-size: 1.3rem;
+    padding-bottom: 0.1em;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+h6 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75em;
+}
+
+blockquote {
+    border-left: solid 0.2em $offBlack;
+    font-family: $systemSerif;
+    font-style: normal;
+    margin: 1.5em 0;
+    padding-left: 1em;
+}
+
+cite {
+    font-style: normal;
+}
+
+pre, code, xmp {
+    font-family: $systemMonospace;
+    white-space: pre-wrap;
+}
+
+figure {
+    font-family: $systemSerif;
+    font-weight: bold;
+    margin: 2em 0;
+    img {
+        border: solid 0.1em $blue;
+    }
+}
+
+dt {
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-size: 1.1rem;
+    font-weight: bold;
+}

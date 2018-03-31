@@ -1,0 +1,17 @@
+<footer id="contentinfo" class="page-footer" aria-label="Site Information">
+	<div id="about">
+		<p>&copy; {% if START_YEAR %} {{START_YEAR}} - {% endif %} {{ BUILD_YEAR }} <a href="mailto:{{ AUTHOR_EMAIL}}">{{ AUTHOR }}</a> &middot; Made with <span class="red">&hearts;</span> in {{ AUTHOR_LOCATION }}</p>
+	</div><!-- /#about -->
+	<nav id="footer-menu" class="footer-nav" aria-label="Bottom Navigation">
+		<p>
+			{% for name, url in FOOTER_NAV_MENU %}
+				{% if loop.first %}
+					<a href="{{ url }}">{{ name }}</a>
+				{% else %}
+					&middot; <a href="{{ url }}">{{ name }}</a>
+				{% endif %}
+			{% endfor %}
+		</p>
+	</nav><!-- /#footer-menu -->
+	<a href="#content">back to top <strong>&uarr;</strong></a>
+</footer><!-- /#contentinfo -->

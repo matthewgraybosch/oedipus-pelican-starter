@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="content" id="content">
+	<h1>Welcome</h1>
+	<p>I'm Matthew Graybosch, currently of Harrisburg, PA. I code for a living, and write science fantasy on my lunch breaks. Here's some stuff to get you started.</p>
+	<h2>Fiction</h2>
+	<p>Most (if not all) of my fiction is part of my <a href="https://www.starbreakersaga.com">Starbreaker</a> saga.</p>
+	<ul id="fiction">
+	{% for release, title, url in FICTION %}
+		<li>{{ release }}: <a href={{ url }}>{{ title }}</a></li>
+	{% endfor %}
+	</ul>
+    <h2>Recent Posts</h2>
+    <p>For all posts, please check the main <a href="/blog/">blog page</a> or the <a href="/blog/archives/">archive</a>.</p>
+    {% set recent = articles if not all_articles else all_articles %}
+    <ul id="recent-posts">
+	{% for ra in recent %}
+		{% if loop.index <= 5 %}
+		<li><a href="{{ SITEURL }}/{{ ra.url }}">{{ ra.title }}</a></li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+	<noscript>
+		<h2>No JavaScript? No Problem!</h2>
+		<p>Incidentally, it looks like you've disabled JavaScript or are using a browser that doesn't support it. The vast majority of this site's content should still be accessible, but embedded stuff like YouTube videos might not work.</p>
+		<p>Please <a href="mailto:{{ AUTHOR_EMAIL }}?subject=NoScript%20Questions">email me</a> if you have any questions or problems.</p>
+	</noscript>
+</section>
+{% endblock %}

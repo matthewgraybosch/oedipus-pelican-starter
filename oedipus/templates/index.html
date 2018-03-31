@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+{{ SITE_BLOG_NAME }} &middot; {{ SITENAME }}
+{% endblock %}
+
+{% block content %}
+<section class="content" id="content">
+	{% block content_title %}
+	<h1>{{ SITE_BLOG_NAME }}</h1>
+	<p>{{ SITE_BLOG_DESC }}</p>
+	{% endblock %}
+	<h2>Page {{ dates_page.number }} / {{ dates_paginator.num_pages }}</h2>
+	<p>This index is paginated. If you want a single-page listing of all posts, <a href="/blog/archives/">try the archives</a>.</p>
+	<nav id="post-list">
+	{% set articles_by_date = articles_page.object_list | groupby('locale_date') %}
+	{% for date in dates_page.object_list|map(attribute='locale_date')|unique %}
+		<h3>{{ date }}</h3>
+		<dl>
+			{% for articles in articles_by_date %}
+				{% if articles.grouper == date %}
+					{% for article in articles.list %}
+						<dt><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></dt>
+						<dd>{{ article.summary }}</dd>
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</dl>
+	{% endfor %}
+	</nav><!-- /#posts-list -->
+	{% if dates_page.has_other_pages() %}
+		{% include 'pagination.html' %}
+	{% endif %}
+</section><!-- /#content -->
+{% endblock content %}

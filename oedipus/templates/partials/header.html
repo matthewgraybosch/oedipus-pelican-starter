@@ -1,0 +1,20 @@
+<div class="offscreen">
+	<a href="#content">skip to main content <strong>&darr;</strong></a>
+</div>
+<header id="banner" class="page-header" aria-label="Site Introduction">
+	<div class="masthead">
+		<p class="title">{{ SITENAME }}</p>
+		<p class="tagline">{{ SITESUBTITLE }}</p>
+	</div>
+	<nav id="header-menu" class="header-nav" aria-label="Top Navigation">
+		<p>
+			{% for name, url in HEADER_NAV_MENU %}
+				{% if loop.first %}
+					<a href="{{ url }}">{{ name }}</a>
+				{% else %}
+					&middot; <a href="{{ url }}">{{ name }}</a>
+				{% endif %}
+			{% endfor %}
+		</p>
+	</nav><!-- /#header-menu -->
+</header><!-- /#banner -->
