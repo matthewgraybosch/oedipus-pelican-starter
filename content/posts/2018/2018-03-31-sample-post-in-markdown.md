@@ -5,5 +5,4 @@ Summary: Write a brief summary of your post. This is also used for SEO, so think
 Tags: sample, reStructuredText
 Slug: sample-post-restructuredtext
 
-
 Hi. This is a sample post using Markdown. Please refer to the [Pelican](http://docs.getpelican.com/en/stable/) documentation for further details.
