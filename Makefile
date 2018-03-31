@@ -19,10 +19,10 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=fireplug.dreamhost.com
-SSH_PORT=22
-SSH_USER=asuraemulator
-SSH_TARGET_DIR=/home/asuraemulator/matthewgraybosch.com
+SSH_HOST=
+SSH_PORT=
+SSH_USER=
+SSH_TARGET_DIR=
 
 S3_BUCKET=my_s3_bucket
 
