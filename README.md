@@ -50,13 +50,7 @@ website](https://www.matthewgraybosch.com) and for a few other sites. I'm
 making it available because it's useful to me and might be useful to
 others. I'm open to pull requests if you want to improve upon my work.
 
-If you're having trouble using this for your own website, file an issue
-and I'll get to it *at my convenience*. 
-
-## What if I need immediate support?
-
-Do you need it badly enough to pay for it? Hit me up on
-[Mastodon](https://octodon.social/@starbreaker) and we'll talk.
+If you're having trouble using this for your own website, file an issue. If I don't get to it in a reasonable amount of time, you might have to find me on [Mastodon](https://octodon.social/@starbreaker) and ask me directly.
 
 ## Code of Conduct
 
