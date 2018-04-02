@@ -32,6 +32,17 @@ You might also want the following:
 
 ## How do I use it?
 
+1. In your terminal, run ```git clone --recursive -j8 git://github.com/matthewgraybosch/oedipus-pelican-starter.git```
+2. Open up ```pelicanconf.py``` in your favorite editor and change settings as needed.
+3. Open up ```publishconf.py``` in your favorite editor and set ```SITE_URL```.
+4. Edit ```oedipus/templates/home.html``` to customize your home page.
+5. Edit pages in ```content/pages/``` to taste.
+6. Replace content in ```content/posts/``` with your own blog posts.
+7. Edit Makefile to set your Python 3 path, your Sass path, and to set up your deployment method.
+8. When you're ready, follow deployment instructions from Pelican's documentation.
+
+PS: Keep [the Pelican manual](http://docs.getpelican.com/en/stable/) handy if you aren't already familiar with Pelican -- especially if you have prior experience with static site generators like Jekyll or Hugo. Things are a little different here.
+
 ## Will you support this?
 
 It depends on what you mean by support. I'm using this for my [personal
