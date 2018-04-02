@@ -12,6 +12,10 @@
         text-align: center;
     }
     
+    h1 {
+		text-align: center;
+    }
+    
     .page-header, .page-footer {
         text-align: center;
     }
@@ -40,6 +44,10 @@
     blockquote, figure {
         margin: 1.5em 3em;
     }
+    
+    h1 {
+		text-align: center;
+    }
 }
 
 @media (min-width: $hugeScreen) {
@@ -54,5 +62,9 @@
 	
     blockquote, figure {
         margin: 1.5em 3em;
+    }
+    
+    h1 {
+		text-align: center;
     }
 }

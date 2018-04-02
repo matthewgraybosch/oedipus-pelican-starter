@@ -4,21 +4,21 @@ from __future__ import unicode_literals
 from datetime import date
 
 BUILD_DATE = date.today()
-START_YEAR = 1996
+START_YEAR = date.today().year
 BUILD_YEAR = date.today().year
-AUTHOR = 'Matthew Graybosch'
-AUTHOR_EMAIL = 'public@matthewgraybosch.com'
-AUTHOR_MASTODON = 'https://octodon.social/@starbreaker'
-AUTHOR_LOCATION = 'Harrisburg, PA'
-SITENAME = 'Matthew Graybosch'
-SITESUBTITLE = 'a science fantasy author, developer, and metalhead with delusions of erudition'
+AUTHOR = 'Your Name Here'
+AUTHOR_EMAIL = 'Your Email Here'
+AUTHOR_MASTODON = 'If you don\'t know what this is, go to https://joinmastodon.org. :)'
+AUTHOR_LOCATION = 'Your Home City/Country'
+SITENAME = 'Oedipus'
+SITESUBTITLE = 'Build your own motherfucking website with Pelican. Patricide optional.'
 SITEURL = ''
 SITE_GENERATOR = 'Pelican 3.7.1 on OpenBSD -current'
 
-SITE_BLOG_NAME = 'A Day Job and a Dream'
-SITE_BLOG_DESC = 'When most writers start out, a day job and a dream is all they have. Even now, it is all I need to tell my story.'
-SITE_OG_IMAGE = '/images/author-nyc.jpg'
+SITE_BLOG_NAME = 'Patricidal Motherfucker'
+SITE_BLOG_DESC = 'This is the personal blog of King Oedipus of Thebes, as dictated to his daughter Antigone.'
 
+SITE_OG_IMAGE = '/images/carole-radatto-oedipus-and-sphinx.jpg'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
@@ -26,7 +26,7 @@ DEFAULT_DATE_FORMAT = '%d %B %Y'
 LOCALE = 'en_US'
 LOAD_CONTENT_CACHE = False
 ARTICLE_EXCLUDES = ['drafts']
-GITHUB_URL = 'https://github.com/matthewgraybosch/pelican.matthewgraybosch.com'
+GITHUB_URL = 'https://github.com/matthewgraybosch/oedipus-pelican-starter'
 
 # Take advantage of the following defaults
 STATIC_PATHS = [
@@ -46,7 +46,7 @@ EXTRA_PATH_METADATA = {
 FB_APP_ID = ''
 
 # Plugin settings
-PLUGIN_PATHS = ['/home/demifiend/documents/pelican.matthewgraybosch.com/pelican-plugins/']
+PLUGIN_PATHS = ['~/git/oedipus-pelican-starter/pelican-plugins/']
 PLUGINS = ['better_figures_and_images',
            'sitemap']
 
@@ -83,24 +83,11 @@ TYPOGRIFY_IGNORE_TAGS = [
 # Custom nav menus for motherfucker theme
 HEADER_NAV_MENU = (('Home', '/'),
                    ('About', '/about/'),
-                   ('Projects', '/projects/'),
                    ('Blog', '/blog/'),)
 
 FOOTER_NAV_MENU = (('Colophon', '/colophon/'),
                    ('Subscribe', '/subscribe/'),
-                   ('Categories', '/blog/categories/'))
-
-# More custom lists for my fiction.
-
-FICTION = (('WIP', '<em>Shattered Guardian</em>', '#'),
-		   ('2016', '<em>Silent Clarion</em>', '#'),
-		   ('2015', '&quot;Limited Liability&quot;', '#'),
-		   ('2014', '&quot;Steadfast&quot;', '#'),
-		   ('2013', '<em>Without Bloodshed</em>', '#'),
-		   ('2013', '&quot;The Milgram Battery&quot;', '#'),
-		   ('2012', '&quot;The Holiday Rush&quot;', '#'),
-		   ('2012', '&quot;Tattoo Vampire&quot;', '#'),
-		   ('2009', '<em>Starbreaker</em>', '#'),)
+                   ('Categories', '/blog/categories/'),)
 
 DEFAULT_PAGINATION = 15
 
