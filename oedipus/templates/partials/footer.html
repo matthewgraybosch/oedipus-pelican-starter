@@ -1,6 +1,6 @@
 <footer id="contentinfo" class="page-footer" aria-label="Site Information">
 	<div id="about">
-		<p>&copy; {% if START_YEAR %} {{START_YEAR}} - {% endif %} {{ BUILD_YEAR }} <a href="mailto:{{ AUTHOR_EMAIL}}">{{ AUTHOR }}</a> &middot; Made with <span class="red">&hearts;</span> in {{ AUTHOR_LOCATION }}</p>
+		<p>&copy; {% if START_YEAR and START_YEAR != BUILD_YEAR %} {{START_YEAR}} - {% endif %} {{ BUILD_YEAR }} <a href="mailto:{{ AUTHOR_EMAIL}}">{{ AUTHOR }}</a> &middot; Made with <span class="red">&hearts;</span> in {{ AUTHOR_LOCATION }}</p>
 	</div><!-- /#about -->
 	<nav id="footer-menu" class="footer-nav" aria-label="Bottom Navigation">
 		<p>
