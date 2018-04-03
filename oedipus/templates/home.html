@@ -1,9 +1,19 @@
 {% extends "base.html" %}
+{% block seo %}
+{% include 'partials/home-seo.html' %}
+{% endblock seo %}
+	
 {% block content %}
 <section class="content" id="content">
 	<h1>Welcome</h1>
-	<p>This is the home page for the Oedipus starter kit for Pelican. It's located in <code>oedipus/templates/home.html</code>. You can customize it if you know HTML and Jinja 2.</p>
-	<p><img src='images/carole-radatto-oedipus-and-sphinx.jpg' width="800px"height="100%" alt="Oedipus and the Sphinx of Thebes, Red Figure Kylix, c. 470 BC, from Vulci, attributed to the Oedipus Painter, Vatican Museums - Photo by Carole Radatto."></p>
+	<p>I'm Matthew Graybosch, currently of Harrisburg, PA. I code for a living, and write science fantasy on my lunch breaks. Here's some stuff to get you started.</p>
+	<h2>Fiction</h2>
+	<p>Most (if not all) of my fiction is part of my <a href="https://www.starbreakersaga.com">Starbreaker</a> saga.</p>
+	<ul id="fiction">
+	{% for release, title, url in FICTION %}
+		<li>{{ release }}: <a href={{ url }}>{{ title }}</a></li>
+	{% endfor %}
+	</ul>
     <h2>Recent Posts</h2>
     <p>For all posts, please check the main <a href="/blog/">blog page</a> or the <a href="/blog/archives/">archive</a>.</p>
     {% set recent = articles if not all_articles else all_articles %}
