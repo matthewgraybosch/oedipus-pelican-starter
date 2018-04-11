@@ -7,6 +7,7 @@ BUILD_DATE = date.today()
 START_YEAR = date.today().year
 BUILD_YEAR = date.today().year
 AUTHOR = 'Your Name Here'
+AUTHOR_URL = 'Your URL Here'
 AUTHOR_EMAIL = 'Your Email Here'
 AUTHOR_MASTODON = 'If you don\'t know what this is, go to https://joinmastodon.org. :)'
 AUTHOR_LOCATION = 'Your Home City/Country'
@@ -40,6 +41,9 @@ EXTRA_PATH_METADATA = {
     'files/favicon.ico': {'path': 'favicon.ico'},
     'files/.htaccess': {'path': '.htaccess'},
 }
+
+ICON_URL = 'icon.png'
+FAVICON_URL = 'favicon.ico'
 
 # If you're a schmuck who still depends on Facebook, 
 # you might want to set this. Otherwise, leave it blank.
@@ -91,11 +95,6 @@ FOOTER_NAV_MENU = (('Colophon', '/colophon/'),
 
 DEFAULT_PAGINATION = 15
 
-# For the landing page
-TEMPLATE_PAGES = {
-    '../oedipus/templates/home.html': 'index.html',
-}
-
 # Domains to DNS-prefetch for better performance.
 DNS_PREFETCH_DOMAINS = ('www.youtube.com',
                         'www.youtube-nocookie.com',
@@ -120,6 +119,14 @@ TAGS_URL = 'blog/tags/'
 TAGS_SAVE_AS = 'blog/tags/index.html'
 TAG_URL = 'blog/tag/{slug}/'
 TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
+JSON_FEED_URL = 'feeds/feed.json'
+JSON_FEED_COMMENT = 'Use this to read posts from this site in any feed reader that supports JSON feeds. Just copy the URL and paste it into your reader\'s feed URL field. It\'s almost as easy as Atom or RSS.'
+
+# For the landing page
+TEMPLATE_PAGES = {
+    '../oedipus/templates/home.html': 'index.html',
+    '../oedipus/templates/feed.json': JSON_FEED_URL,
+}
 
 # Sitemap settings
 SITEMAP = {
