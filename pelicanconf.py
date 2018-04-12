@@ -128,6 +128,7 @@ AP_PREFERRED_USERNAME = 'oedipus'
 AP_NAME = SITENAME
 AP_SUMMARY = SITESUBTITLE
 AP_ICON = SITE_OG_IMAGE
+AP_FOLLOWING_USE_LINKS_LIST = True
 
 # Use this to define additional templates that Pelican doesn't know about by default.
 # If you're using ActivityPub templates to implement POSSE support, you should edit your
@@ -157,6 +158,10 @@ EXTRA_PATH_METADATA = {
     'files/favicon.ico': {'path': 'favicon.ico'},
     'files/.htaccess': {'path': '.htaccess'},
 }
+
+# Blogroll
+LINKS = (('Matthew Graybosch', 'https://www.matthewgraybosch.com/'),
+         ('You can modify those links in your config file', '#'),)
 
 # Sitemap settings
 SITEMAP = {
