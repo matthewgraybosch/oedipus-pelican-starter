@@ -2,10 +2,21 @@
   "@context": ["https://www.w3.org/ns/activitystreams",
                 {"@language": "{{ DEFAULT_LANG }}"}],
   "id": "{{ SITEURL }}/{{ AP_FOLLOWING_URL }}",
-  "summary": "People that {{ SITENAME }} follows",
+  "summary": "People/Websites that {{ SITENAME }} follows",
   "type": "Collection",
   "totalItems": "0",
   "items": [
-    
+    {% if AP_FOLLOWING_USE_LINKS_LIST and LINKS %}
+    {% for name, url in LINKS %}
+    {
+      "@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Link",
+      "href": "{{ url }}",
+      "hreflang": "en",
+      "mediaType": "text/html",
+      "name": "{{ name }}"
+    }{% if (loop.index >= 1) and (loop.index < loop.length) %},{% endif %}
+    {% endfor %}
+    {% endif %}
   ]
 }
