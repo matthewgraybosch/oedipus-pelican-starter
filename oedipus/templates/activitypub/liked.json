@@ -1,0 +1,11 @@
+{
+  "@context": ["https://www.w3.org/ns/activitystreams",
+                {"@language": "{{ DEFAULT_LANG }}"}],
+  "id": "{{ SITEURL }}/{{ AP_LIKED_URL }}",
+  "summary": "Stuff {{ SITENAME }} liked",
+  "type": "Collection",
+  "totalItems": "0",
+  "items": [
+    
+  ]
+}
