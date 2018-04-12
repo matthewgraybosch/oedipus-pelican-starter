@@ -29,19 +29,6 @@ LOAD_CONTENT_CACHE = False
 ARTICLE_EXCLUDES = ['drafts']
 GITHUB_URL = 'https://github.com/matthewgraybosch/oedipus-pelican-starter'
 
-# Take advantage of the following defaults
-STATIC_PATHS = [
-    'images',
-    'files',
-]
-
-EXTRA_PATH_METADATA = {
-    'files/robots.txt': {'path': 'robots.txt'},
-    'files/humans.txt': {'path': 'humans.txt'},
-    'files/favicon.ico': {'path': 'favicon.ico'},
-    'files/.htaccess': {'path': '.htaccess'},
-}
-
 ICON_URL = 'icon.png'
 FAVICON_URL = 'favicon.ico'
 
@@ -142,10 +129,33 @@ AP_NAME = SITENAME
 AP_SUMMARY = SITESUBTITLE
 AP_ICON = SITE_OG_IMAGE
 
-# For the landing page
+# Use this to define additional templates that Pelican doesn't know about by default.
+# If you're using ActivityPub templates to implement POSSE support, you should edit your
+# Makefile to pull the latest versions of all files but outbox.json and place them
+# in the appropriate locations in your content/files directory. Then you
+# should remove their entries from TEMPLATE_PAGES and add entries to EXTRA_PATH_METADATA.
 TEMPLATE_PAGES = {
     '../oedipus/templates/home.html': 'index.html',
     '../oedipus/templates/feed.json': JSON_FEED_URL,
+    '../oedipus/templates/activitypub/actor.json': AP_PROFILE_URL,
+    '../oedipus/templates/activitypub/following.json': AP_FOLLOWING_URL,
+    '../oedipus/templates/activitypub/followers.json': AP_FOLLOWERS_URL,
+    '../oedipus/templates/activitypub/liked.json': AP_LIKED_URL,
+    '../oedipus/templates/activitypub/inbox.json': AP_INBOX_URL,
+    '../oedipus/templates/activitypub/outbox.json': AP_OUTBOX,
+}
+
+# Take advantage of the following defaults
+STATIC_PATHS = [
+    'images',
+    'files',
+]
+
+EXTRA_PATH_METADATA = {
+    'files/robots.txt': {'path': 'robots.txt'},
+    'files/humans.txt': {'path': 'humans.txt'},
+    'files/favicon.ico': {'path': 'favicon.ico'},
+    'files/.htaccess': {'path': '.htaccess'},
 }
 
 # Sitemap settings
