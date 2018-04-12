@@ -1,0 +1,17 @@
+{
+  "@context": ["https://www.w3.org/ns/activitystreams",
+               {"@language": "{{ DEFAULT_LANG }}"}],
+  "type": "{{ AP_ACTOR_TYPE }}",
+  "id": "{{ SITEURL }}",
+  "following": "{{ SITEURL }}/{{ AP_FOLLOWING_URL }}",
+  "followers": "{{ SITEURL }}/{{ AP_FOLLOWERS_URL }}",
+  "liked": "{{ SITEURL }}/{{ AP_LIKED_URL }}",
+  "inbox": "{{ SITEURL }}/{{ AP_INBOX_URL }}",
+  "outbox": "{{ SITEURL }}/{{ AP_OUTBOX_URL }}",
+  "preferredUsername": "{{ AP_PREFERRED_USERNAME }}",
+  "name": " {{ AP_NAME }}",
+  "summary": "{{ AP_SUMMARY }}",
+  "icon": [
+    "{{ SITEURL }}/{{ AP_ICON }}"
+  ]
+}
