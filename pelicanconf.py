@@ -122,6 +122,26 @@ TAG_SAVE_AS = 'blog/tag/{slug}/index.html'
 JSON_FEED_URL = 'feeds/feed.json'
 JSON_FEED_COMMENT = 'Use this to read posts from this site in any feed reader that supports JSON feeds. Just copy the URL and paste it into your reader\'s feed URL field. It\'s almost as easy as Atom or RSS.'
 
+# These variables are for generating ActivityPub data similar to a RSS/Atom/JSON feed.
+# AP_PROFILE* variables refer to the "Actor" object (https://www.w3.org/TR/activitypub/#actor-objects).
+# Valid values for AP_PROFILE_TYPE include 'Application', 'Group', 'Organization', 'Person',  and 'Service'
+AP_PROFILE_TYPE = 'Application'
+# The profile.json file ties everything together. When first joining a syndication site that uses ActivityPub
+# the POSSE daemon should pull the original files from your website. You should then change the URLs
+# for everything but the outbox.json feed to endpoints provided by the POSSE daemon. This lets you write
+# JS to render current data (to show likes, mentions, etc) and also allows you to pull data if you want to
+# move to a different syndication site or run your own.
+AP_PROFILE_URL = 'feeds/ap/profile.json'
+AP_FOLLOWING_URL = 'feeds/ap/following.json'
+AP_FOLLOWERS_URL = 'feeds/ap/followers.json'
+AP_LIKED_URL = 'feeds/ap/liked.json'
+AP_INBOX_URL = 'feeds/ap/inbox.json'
+AP_OUTBOX_URL = 'feeds/ap/outbox.json'
+AP_PREFERRED_USERNAME = 'oedipus'
+AP_NAME = SITENAME
+AP_SUMMARY = SITESUBTITLE
+AP_ICON = SITE_OG_IMAGE
+
 # For the landing page
 TEMPLATE_PAGES = {
     '../oedipus/templates/home.html': 'index.html',
@@ -145,3 +165,4 @@ SITEMAP = {
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+
