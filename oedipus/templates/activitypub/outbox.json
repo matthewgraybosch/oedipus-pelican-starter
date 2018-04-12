@@ -9,7 +9,7 @@
     {% for article in articles %}
     {
       "@context": "https://www.w3.org/ns/activitystreams",
-      "type": "Object",
+      "type": "Article",
       "id": "{{ SITEURL }}/{{ article.url }}",
       "url": "{{ SITEURL }}/{{ article.url }}",
       "name": "{{ article.title|striptags }}",
