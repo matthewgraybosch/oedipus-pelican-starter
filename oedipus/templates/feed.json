@@ -10,15 +10,15 @@
   "author": {
     "name": "{{ AUTHOR }}",
     "url": "{{ AUTHOR_URL }}"
-    {% if AUTHOR_AVATAR %}, "avatar": "{{ AUTHOR_AVATAR }}"{% endif %}
+    {% if AUTHOR_AVATAR %}, "avatar": "{{ SITEURL }}/{{ AUTHOR_AVATAR }}"{% endif %}
   },
   "items": [
     {% for article in articles %}
     {
       "id": "{{ SITEURL }}/{{ article.url }}",
       "url": "{{ SITEURL }}/{{ article.url }}",
-      "title": "{{ article.title|striptags|escape }}",
-      "content_html": "{{ article.content|striptags|escape }}",
+      "title": "{{ article.title|striptags }}",
+      "content_html": "{{ article.content|replace('\"', '\\\"')|replace('\n','') }}",
       "date_published": "{{ article.date|strftime('%Y-%m-%dT%H:%M:%S%z') }}"
       {% if article.modified %},"date_modified": "{{ article.modified|strftime('%Y-%m-%dT%H:%M:%S%z') }}"{% endif %}
     }
