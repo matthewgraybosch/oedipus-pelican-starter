@@ -4,7 +4,7 @@
   "id": "{{ SITEURL }}/{{ AP_OUTBOX_URL }}#Public",
   "summary": "Outbox for {{ SITENAME }}",
   "type": "OrderedCollection",
-  "totalItems": {{ articles|count }},
+  "totalItems": "{{ articles|count }}",
   "items": [
     {% for article in articles %}
     {
