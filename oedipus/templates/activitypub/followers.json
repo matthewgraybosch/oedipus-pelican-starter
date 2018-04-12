@@ -2,7 +2,7 @@
   "@context": ["https://www.w3.org/ns/activitystreams",
                 {"@language": "{{ DEFAULT_LANG }}"}],
   "id": "{{ SITEURL }}/{{ AP_FOLLOWERS_URL }}",
-  "summary": "Followers List for {{ SITENAME }}",
+  "summary": "People following {{ SITENAME }}",
   "type": "Collection",
   "totalItems": "0",
   "items": [
