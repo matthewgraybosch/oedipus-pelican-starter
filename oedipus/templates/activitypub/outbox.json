@@ -1,0 +1,24 @@
+{
+  "@context": ["https://www.w3.org/ns/activitystreams",
+                {"@language": "{{ DEFAULT_LANG }}"}],
+  "id": "{{ SITEURL }}#Public",
+  "summary": "Outbox for {{ SITENAME }}",
+  "type": "OrderedCollection",
+  "totalItems": {{ articles|count }},
+  "items": [
+    {% for article in articles %}
+    {
+      "@context": "https://www.w3.org/ns/activitystreams",
+      "type": "Object",
+      "id": "{{ SITEURL }}/{{ article.url }}",
+      "url": "{{ SITEURL }}/{{ article.url }}",
+      "name": "{{ article.title|striptags }}",
+      "content": "{{ article.content|replace('\"', '\\\"')|replace('\n','') }}",
+      {% if article.image %}"image": "{{ SITEURL }}/{{ article.image }}", {% endif %}
+      "published": "{{ article.date|strftime('%Y-%m-%dT%H:%M:%S%z') }}"
+      {% if article.modified %},"updated": "{{ article.modified|strftime('%Y-%m-%dT%H:%M:%S%z') }}"{% endif %}
+    }
+    {% if (loop.index >= 1) and (loop.index < loop.length) %},{% endif %}
+    {% endfor %}
+  ]
+}
