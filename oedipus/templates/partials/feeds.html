@@ -22,3 +22,9 @@
 {% if TAG_FEED_RSS and tag %}
 <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
 {% endif %}
+{% if JSON_FEED_URL %}
+<link href="{{ FEED_DOMAIN }}/{{ JSON_FEED_URL }}" type="application/json" rel="alternate" title="{{ SITENAME }} JSON Feed" />
+{% endif %}
+{% if AP_PROFILE_URL %}
+<link href="{{ FEED_DOMAIN }}/{{ AP_PROFILE_URL }}" type="application/json" rel="alternate" title="{{ SITENAME }} JSON ActivityPub Profile" />
+{% endif %}
