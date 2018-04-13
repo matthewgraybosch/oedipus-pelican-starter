@@ -143,7 +143,7 @@ TEMPLATE_PAGES = {
     '../oedipus/templates/activitypub/followers.json': AP_FOLLOWERS_URL,
     '../oedipus/templates/activitypub/liked.json': AP_LIKED_URL,
     '../oedipus/templates/activitypub/inbox.json': AP_INBOX_URL,
-    '../oedipus/templates/activitypub/outbox.json': AP_OUTBOX,
+    '../oedipus/templates/activitypub/outbox.json': AP_OUTBOX_URL,
 }
 
 # Take advantage of the following defaults
