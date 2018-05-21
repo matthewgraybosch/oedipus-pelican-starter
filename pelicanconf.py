@@ -9,7 +9,7 @@ BUILD_YEAR = date.today().year
 AUTHOR = 'Your Name Here'
 AUTHOR_URL = 'Your URL Here'
 AUTHOR_EMAIL = 'Your Email Here'
-AUTHOR_MASTODON = 'If you don\'t know what this is, go to https://joinmastodon.org. :)'
+AUTHOR_MASTODON = 'If you don\'t know what this is, go to https://joinmastodon.org. Otherwise, use your profile URL, not just your handle.'
 AUTHOR_LOCATION = 'Your Home City/Country'
 SITENAME = 'Oedipus'
 SITESUBTITLE = 'Build your own motherfucking website with Pelican. Patricide optional.'
@@ -38,8 +38,7 @@ FB_APP_ID = ''
 
 # Plugin settings
 PLUGIN_PATHS = ['~/git/oedipus-pelican-starter/pelican-plugins/']
-PLUGINS = ['better_figures_and_images',
-           'sitemap']
+PLUGINS = ['readtime', 'sitemap']
 
 # Setting for the better_figures_and_images plugin
 RESPONSIVE_IMAGES = True
