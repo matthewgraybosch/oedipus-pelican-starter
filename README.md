@@ -2,6 +2,8 @@
 
 Build your own motherloving website using Pelican. Patricide optional.
 
+![Screenshot of OEDIPUS](content/images/default-screenshot.png)
+
 ## What's a "motherloving website"?
 
 It's what you call a [mother*fucking*](http://motherfuckingwebsite.com)
