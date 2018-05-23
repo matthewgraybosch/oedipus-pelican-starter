@@ -45,6 +45,17 @@ You might also want the following:
 
 PS: Keep [the Pelican manual](http://docs.getpelican.com/en/stable/) handy if you aren't already familiar with Pelican -- especially if you have prior experience with static site generators like Jekyll or Hugo. Things are a little different here.
 
+## What about plugins?
+
+Pelican has a wealth of plugins, and if you cloned this repo as instructed you'll have them in the ```pelican_plugins``` directory. The following plugins are enabled by default:
+
+* readtime
+* sitemap
+
+You can change this by editing ```pelicanconf.py```. Please note that neither 
+*readtime* nor *sitemap* list any dependencies. If you choose to enable plugins, 
+please read their respective README files and install any necessary dependencies.
+
 ## Will you support this?
 
 It depends on what you mean by support. I'm using this for my [personal
@@ -52,7 +63,9 @@ website](https://www.matthewgraybosch.com) and for a few other sites. I'm
 making it available because it's useful to me and might be useful to
 others. I'm open to pull requests if you want to improve upon my work.
 
-If you're having trouble using this for your own website, file an issue. If I don't get to it in a reasonable amount of time, you might have to find me on [Mastodon](https://octodon.social/@starbreaker) and ask me directly.
+If you're having trouble using this for your own website, file an issue. 
+If I don't get to it in a reasonable amount of time, you might have to find 
+me on [Mastodon](https://octodon.social/@starbreaker) and ask me directly.
 
 ## Code of Conduct
 
