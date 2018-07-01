@@ -34,7 +34,7 @@ You might also want the following:
 
 ## How do I use it?
 
-1. In your terminal, run ```git clone --recursive -j8 git://github.com/matthewgraybosch/oedipus-pelican-starter.git```
+1. In your terminal, run ```git clone --recursive https://github.com/matthewgraybosch/oedipus-pelican-starter.git```
 2. Open up ```pelicanconf.py``` in your favorite editor and change settings as needed.
 3. Open up ```publishconf.py``` in your favorite editor and set ```SITE_URL```.
 4. Edit ```oedipus/templates/home.html``` to customize your home page.
